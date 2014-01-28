@@ -1,0 +1,49 @@
+<div class="logo">
+    <img src="/images/logo.png" />
+</div>
+<section class="selected-offer" ng-repeat="selectedItem in selectedOffer">
+    <div class="price">{{selectedItem.price | slash}}<span class="price-postfix">&euro; <br />hlö</span></div>
+    <div class="image-container">
+        <img ng-src="/images/offers/{{selectedItem.image}}" />
+    </div>
+    <div class="description">
+        <h1>{{selectedItem.name}}</h1>
+        <p>{{selectedItem.description}}</p>
+    </div>
+</section>
+
+<section class="offers-container">
+    <ul class="offers">
+        <li ng-repeat="offer in offersFiltered" class="offer-item">
+            <div class="price">{{offer.price | slash}}<span class="price-postfix">&euro; <br />hlö</span></div>
+            <div class="offer-item-container">
+                <img ng-src="/images/offers/thumbnail-{{offer.image}}" />
+                <h2>{{offer.name}}</h2>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="sliders">
+    <section class="slider-container">
+        <header>
+            Miten viet&auml;t aikaasi mieluiten?
+        </header>
+        <div class="slider-wrap">
+            <div id="funLevelSlider"></div>
+            <span class="left">M&ouml;k&ouml;tt&auml;en</span>
+            <span class="right">Juhlien</span>
+        </div>
+    </section>
+
+    <section class="slider-container">
+        <header>
+            Mink&auml;laisista maisemista pid&auml;t?
+        </header>
+        <div class="slider-wrap">
+            <div id="beautyLevelSlider"></div>
+            <span class="left">Masentavista</span>
+            <span class="right">Kauniista</span>
+        </div>
+    </section>
+</section>

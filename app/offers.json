@@ -1,0 +1,85 @@
+ {
+ 	"offers": [
+ 		{
+ 			"id":			      1,
+ 			"name":			    "Hervanta",
+ 			"description":	"Tutustu ainutlaatuiseen arkkitehtuuriin ja nauti lumoavasta ilmapiiristä!",
+ 			"image":		    "offer-hervanta.jpg",
+ 			"price":		    "8e/hlö",
+ 			"fun_level":	  1,
+ 			"beauty_level": 1
+  		},
+  		{
+ 			"id":			2,
+ 			"name":			"Reykjavik",
+ 			"description":	"Kuumaa ja kylmää, tulivuoria ja geysirejä! Maailman pienin pohjoismaa kutsuu sinua!",
+ 			"image":		"offer-reykjavik.jpg",
+ 			"price":		"12e/hlö",
+ 			"fun_level":	1,
+ 			"beauty_level":	2
+  		},
+  		{
+ 			"id":			3,
+ 			"name":			"Bermuda",
+ 			"description":	"Mystistä menoa ja arkeologisia aarteita, vain menolippuja tarjolla!",
+ 			"image":		"offer-bermuda.jpg",
+ 			"price":		"120e/hlö",
+ 			"fun_level":	1,
+ 			"beauty_level":	3
+  		},
+  		{
+ 			"id":			4,
+ 			"name":			"Kouvola",
+ 			"description":	"Ajaton miljöö ja leppoisa paikallisväestä takaavat onnistuneen reissun!",
+ 			"image":		"offer-kouvola.jpg",
+ 			"price":		"220e/hlö",
+ 			"fun_level":	2,
+ 			"beauty_level":	1
+  		},
+  		{
+ 			"id":			5,
+ 			"name":			"Pariisi",
+ 			"description":	"Nauti viinilasillisesta Eiffel-tornin varjossa, c'est magnifique!",
+ 			"image":		"offer-paris.jpg",
+ 			"price":		"300e/hlö",
+ 			"fun_level":	2,
+ 			"beauty_level":	2
+  		},
+  		{
+ 			"id":			6,
+ 			"name":			"Tukholma",
+ 			"description":	"Nauti kaupunkilomasta naapurimaan kuhisevassa metropolissa",
+ 			"image":		"offer-tukholma.jpg",
+ 			"price":		"300e/hlö",
+ 			"fun_level":	2,
+ 			"beauty_level":	3
+  		},
+  		{
+ 			"id":			7,
+ 			"name":			"Novosibirsk",
+ 			"description":	"Siperian radan ehdoton helmi, kiehtova kaupunki vain 3300km Moskovasta itään!",
+ 			"image":		"offer-novosibirsk.jpg",
+ 			"price":		"320e/hlö",
+ 			"fun_level":	3,
+ 			"beauty_level":	1
+  		},
+  		{
+ 			"id":			8,
+ 			"name":			"Malé",
+ 			"description":	"Paratiisi maan päällä! Anna malediivien viedä sydämesi!",
+ 			"image":		"offer-male.jpg",
+ 			"price":		"1200e/hlö",
+ 			"fun_level":	3,
+ 			"beauty_level":	2
+  		},
+  		{
+ 			"id":			9,
+ 			"name":			"Tampere",
+ 			"description":	"Kaikkea oikeassa suhteessa: kulttuuria, kauneutta ja loistavaa tunnelmaa!",
+ 			"image":		"offer-tampere.jpg",
+ 			"price":		"35e/hlö",
+ 			"fun_level":	3,
+ 			"beauty_level":	3
+  		}
+ 	]
+ }
