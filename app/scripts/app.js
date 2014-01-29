@@ -3,8 +3,8 @@
 var solitaApp = angular.module('solitaApp', [
   'ngRoute',
   'ngAnimate',
-  'ngResource',
-  'ngSanitize',
+  //'ngResource',
+  //'ngSanitize',
   'tripControllers'
 ]).
    filter('slash', function() {

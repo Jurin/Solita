@@ -1,5 +1,10 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 $section-background: "#FFFFFF";
+
+/* entypo */
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
 
 @mixin transition($duration) {
   -webkit-transition: $duration;
@@ -20,6 +25,7 @@ body {
     background-color: #432F12;
     background-repeat: no-repeat;
     background-position: 50% top;
+    background-attachment:fixed;
     font-family: "Myriad Pro", "Sans Serif", "Arial";
 }
 
@@ -31,7 +37,7 @@ div.logo{
   left: 5px;
   position: absolute;
   top: 0px;
-  z-index: 1000;
+  z-index: 1001;
   width: 150px;
 }
 
@@ -43,11 +49,11 @@ div.container{
   padding-top: 0px;
   position: relative;
   top: 10px;
-  max-width: 1180px;
+  max-width: 1240px;
   min-width: 240px;
   z-index: 100;
   width: 95.294117647058%;
-  height: 1000px;
+  height: 800px;
 }
 
 section.sliders{
@@ -61,8 +67,6 @@ section.sliders{
 }
 
 section.slider-container{
-  background-position: center bottom;
-  background-repeat: no-repeat;
   height: 165px;
 }
 
@@ -74,13 +78,44 @@ section.slider-container header{
 }
 
 section.selected-offer{
+  -webkit-transform: translateZ(0px);
   background-color: #FFFFFF;
-  height: 159px;
+  /*height: 159px;*/
+  max-height: 147px;
   position: absolute;
   top: 55px;
   width: 95.061728395062%;
   padding: 2.469135802469%;
-  z-index: 102;
+  z-index: 1000;
+}
+
+section.selected-offer div.shopping-basket {
+  background-color: #3181DB;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 25px;
+  opacity: 0.7;
+  padding-left: 11px;
+  position: absolute;
+  right: 73px;
+  text-align: left;
+  text-transform: uppercase;
+  top: -8px;
+  /*width: 107px;*/
+  padding-right: 30px;
+}
+
+section.selected-offer div.shopping-basket:hover{
+  background-color: #e29e3f;
+  opacity: 1;
+}
+
+section.selected-offer div.shopping-basket.entypo-basket:before {
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  right: 8%;
 }
 
 section.selected-offer div.image-container{
@@ -117,6 +152,7 @@ div.price{
   position: absolute;
   text-align: center;
   width: 66px;
+  z-index: 1000;
 }
 
 section.selected-offer div.price{
@@ -137,12 +173,11 @@ section.selected-offer h1{
 section.offers-container{
   padding: 0;
   position: relative;
-  top: 230px;
-  z-index: 103;
+  top: 228px;
+  z-index: 90;
   width: 100%;
   background-color: #ffffff;
   text-align: center;
-  /*padding: 2.469135802469%;*/
 }
 
 section.offers-container div.price{
@@ -163,9 +198,9 @@ li.offer-item{
   position: relative;
   margin: 1%;
   padding: 1%;
-  position: relative;
   width: 20%;
   max-width: 100px;
+  border: 0;
 }
 
 li.offer-item h2{
@@ -175,7 +210,6 @@ li.offer-item h2{
 }
 
 /* Slider styles */
-
 div.slider-wrap{
   margin: 0 auto;
   max-width: 433px;
@@ -252,7 +286,7 @@ section.sliders span.right{
   margin-top: 5px;
 }
 
-/* Animates */
+/* Animates
 .offer-item.ng-enter{
   -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
   -moz-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -264,15 +298,15 @@ section.sliders span.right{
   opacity: 0;
 }
 
+.offer-item.ng-enter.offer-item.ng-enter-active{
+  opacity: 1;
+  width: 20%;
+}
+*/
 .offer-item.ng-leave.offer-item.ng-leave-active{
   opacity: 0;
   width: 0px !important;
   display: none;
-}
-
-.offer-item.ng-enter.offer-item.ng-enter-active{
-  opacity: 1;
-  width: 20%;
 }
 
 .offer-item.ng-leave {
@@ -280,6 +314,7 @@ section.sliders span.right{
   width: 0px;
   display: none;
 }
+
 
 /* Selected item */
 .selected-offer.ng-enter,
@@ -309,44 +344,28 @@ section.sliders span.right{
   opacity: 1;
 }
 
-
 /* Responsive */
 @media screen and (min-width: 1024px) {
   div.logo{
-    left: 5px;
-    position: absolute;
     top: 48px;
-    z-index: 1000;
     width: auto;
   }
 
   div.container{
     margin: 0 auto;
-    overflow: auto;
-    margin-left: 2.966101694915%; /*35px;*/
-    margin-right: 1.694915254237%; /*20px;*/
-    margin-top: 0px;
-    position: relative;
     top: 0px;
-    max-width: 1240px;
-    min-width: 240px;
-    z-index: 100;
     height: 1200px;
-    width: 95.338983050848%;
+    width: 99%;
   }
+
   section.selected-offer{
     width: 38%;
     padding: 12px;
-    height: 159px;
-    background-color: #ffffff;
-    position: absolute;
     left: 590px;
     top: 140px;
-    z-index: 102;
   }
 
   section.sliders{
-    background-color: #ffffff;
     height: 460px;
     left: 35px;
     padding-left: 22px;
@@ -356,30 +375,19 @@ section.sliders span.right{
     top: 140px;
     max-width: 496px;
     width: 99%;
-    z-index: 101;
   }
 
   section.slider-container{
     background-image: url('../images/slider-bg.png');
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center bottom;
     height: 215px;
     width: 100%;
   }
 
   .noUi-target{
-    background-color: rgba(0, 0, 0, 0);
-    background-image: url("../images/slider-track.png");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    border: 0 none;
-    box-shadow: none;
-    margin: 0 auto;
     margin-top: 20px;
     height: 65px;
-    padding-left: 4px;
-    padding-right: 4px;
-    cursor: pointer;
     width: 422px;
   }
 
@@ -398,38 +406,27 @@ section.sliders span.right{
   section.offers-container{
     background-color: rgba(0, 0, 0, 0);
     left: 582px;
-    padding: 0;
     position: absolute;
-    top: 343px;
+    top: 320px;
     width: 41.7%;
-    z-index: 103;
   }
 
-
-
   li.offer-item {
-    background-color: #FFFFFF;
     display: block;
     float: left;
     margin: 2%;
     max-width: none;
     padding: 2%;
-    position: relative;
     width: 41.6%;
   }
 
   .offer-item.ng-enter.offer-item.ng-enter-active{
-    opacity: 1;
     width: 41.6%;
   }
 
-
-
   li.offer-item h2{
     font-family: 'Pacifico', cursive;
-    color: #e0b077;
     font-size: 22px;
-    text-align: center;
   }
 
   ul.offers {
@@ -447,40 +444,46 @@ section.sliders span.right{
 
   section.selected-offer{
     width: 599px;
-    padding: 12px;
-    height: 159px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 140px;
-    z-index: 102;
+    max-height: 159px;
   }
 
   li.offer-item{
     height: 111px;
     width: 118px;
     margin: 10px;
-    float: left;
-    background-color: #ffffff;
-    display: block;
     padding-top: 14px;
     padding-bottom: 11px;
     padding-left: 11px;
     padding-right: 11px;
-    position: relative;
   }
 
   .offer-item.ng-enter.offer-item.ng-enter-active{
-    opacity: 1;
     width: 118px;
   }
 
   section.offers-container {
-    background-color: rgba(0, 0, 0, 0);
-    left: 580px;
     padding: 0;
-    position: absolute;
-    top: 343px;
     width: 645px;
-    z-index: 103;
+    top:399px
   }
+
+  section.selected-offer div.shopping-basket{
+    width: 148px;
+    height: 38px;
+    background-color: #3181db;
+    color: white;
+    position: absolute;
+    bottom: -18px;
+    top: auto;
+    right: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: left;
+    padding-left: 20px;
+    cursor: pointer;
+    opacity: 1;
+  }
+
 }
